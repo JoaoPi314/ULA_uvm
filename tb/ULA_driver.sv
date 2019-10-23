@@ -50,7 +50,7 @@ class ULA_driver extends uvm_driver #(ULA_transaction_in);​
   virtual task driver_transfer(transaction_in tr);
       @(posedge vif.clk_ula);
       $display("",);
-      vif.A <= tr.data;
+      vif.A <= tr.A;
       vif.reg_sel <= tr.reg_sel;
       vif.instru <= tr.instru;
       vif.valid_ula <= '1;

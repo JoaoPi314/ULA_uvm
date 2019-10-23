@@ -31,4 +31,4 @@ class ULA_agent extends uvm_agent;​
       drv.seq_item_port.connect(sqr.seq_item_export);
   endfunction​
 
-endclass: agent
+endclass
