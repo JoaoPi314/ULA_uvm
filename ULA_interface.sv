@@ -1,4 +1,4 @@
-interface interface_ULA(input clk_ula, rst);​  
+interface ULA_interface(input clk_ula, rst);​  
   logic [15:0]  A;​
   logic [1:0]   reg_sel;  
   logic [1:0]   instru;​
