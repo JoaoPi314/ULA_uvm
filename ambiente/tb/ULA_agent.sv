@@ -11,11 +11,7 @@ class ULA_agent extends uvm_agent;​
   ULA_driver     drv;​
   ULA_monitor  mon;
 
-  function new(string name = "ULA_agent", uvm_component parent = null);​
-    super.new(name, parent);​
-    agt_req_port  = new("agt_req_port", this);​
-    agt_resp_port = new("agt_resp_port", this);​
-  endfunction​
+  extern function new(string name = "ULA_agent", uvm_component parent = null);
 
   virtual function void build_phase(uvm_phase phase);​
     super.build_phase(phase);​​
@@ -32,3 +28,9 @@ class ULA_agent extends uvm_agent;​
   endfunction​
 
 endclass
+
+  extern function new(string name = "ULA_agent", uvm_component parent = null);​
+    super.new(name, parent);​
+    agt_req_port  = new("agt_req_port", this);​
+    agt_resp_port = new("agt_resp_port", this);​
+  endfunction​
