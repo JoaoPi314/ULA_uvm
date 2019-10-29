@@ -1,7 +1,7 @@
 class REG_agent extends uvm_agent;​
   `uvm_component_utils(REG_agent)​
 
-  typedef uvm_sequencer#(REG_transaction_in) sequencer;​
+  typedef uvm_sequencer#(REG_transaction_in) REG_sequencer;​
 
   uvm_analysis_port #(REG_transaction_in) agt_req_port;​
   REG_sequencer  sqr;
