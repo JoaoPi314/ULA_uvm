@@ -13,7 +13,7 @@ class REG_monitor extends uvm_monitor;​
 
   virtual function void build_phase(uvm_phase phase);​
     super.build_phase(phase);​
-    if(!uvm_config_db#(REG_interface_vif)::get(this, "", "vif", vif)) begin​
+    if(!uvm_config_db#(REG_interface_vif)::get(this, "", "REG_vif", vif)) begin​
       `uvm_fatal("NOVIF", "failed to get virtual interface")​
     end​
     tr_in = REG_transaction_in::type_id::create("tr_in", this);

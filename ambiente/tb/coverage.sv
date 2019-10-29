@@ -39,7 +39,4 @@ class coverage extends uvm_component;​
   endfunction: write​
 
 
-
-  endfunction: write​
-
 endclass : coverage​

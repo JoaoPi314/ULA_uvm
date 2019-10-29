@@ -18,7 +18,7 @@ class ULA_monitor extends uvm_monitor;​
 
   virtual function void build_phase(uvm_phase phase);​
     super.build_phase(phase);​
-    if(!uvm_config_db#(ULA_interface_vif)::get(this, "", "vif", vif)) begin​
+    if(!uvm_config_db#(ULA_interface_vif)::get(this, "", "ULA_vif", vif)) begin​
       `uvm_fatal("NOVIF", "failed to get virtual interface")​
     end​
     tr_in = ULA_transaction_in::type_id::create("tr_in", this);
@@ -36,9 +36,9 @@ class ULA_monitor extends uvm_monitor;​
           if(vif.valid_out) begin​
             @(negedge vif.valid_out);​
             begin_tr(tr_in, "req");​
-            tr_in.data = vif.A;
+            tr_in.A = vif.A;
             tr_in.reg_sel = vif.reg_sel;
-            tr_in.instruc = vif.instru;​
+            tr_in.instru = vif.instru;​
             req_port.write(tr_in);​
             @(negedge vif.clk_ula);​
             end_tr(tr_in);​

@@ -13,7 +13,7 @@ class ULA_driver extends uvm_driver #(ULA_transaction_in);​
 
     virtual function void build_phase(uvm_phase phase);
 	    super.build_phase(phase);
-	     if(!uvm_config_db#(ULA_interface_vif)::get(this, "", "vif", vif)) begin
+	     if(!uvm_config_db#(ULA_interface_vif)::get(this, "", "ULA_vif", vif)) begin
 	        `uvm_fatal("NOVIF", "failed to get virtual interface")
     	end
 	endfunction
@@ -47,7 +47,7 @@ class ULA_driver extends uvm_driver #(ULA_transaction_in);​
 	endtask : get_and_drive
 
 	
-  virtual task driver_transfer(transaction_in tr);
+  virtual task driver_transfer(ULA_transaction_in tr);
       @(posedge vif.clk_ula);
       $display("",);
       vif.A <= tr.A;

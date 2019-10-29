@@ -9,7 +9,7 @@ class ULA_transaction_in extends uvm_sequence_item;​
     super.new(name);​
   endfunction​
 
-  `uvm_object_param_utils_begin(transaction_in)​
+  `uvm_object_param_utils_begin(ULA_transaction_in)​
     `uvm_field_int(A , UVM_UNSIGNED)​
     `uvm_field_int(reg_sel , UVM_UNSIGNED)​
     `uvm_field_int(instru , UVM_UNSIGNED)​

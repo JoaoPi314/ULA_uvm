@@ -1,7 +1,7 @@
 class scoreboard extends uvm_scoreboard;​
   `uvm_component_utils(scoreboard)​
 
-  typedef transaction_out T;​
+  typedef ULA_transaction_out T;​
   typedef uvm_in_order_class_comparator #(T) comp_type;​
   comp_type comp;
   refmod rfm;

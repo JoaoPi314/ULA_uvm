@@ -1,7 +1,7 @@
 typedef virtual REG_interface_if.mst REG_interface_vif;​
 
-class REG_driver extends uvm_driver #(transaction_in);​
-	`uvm_component_utils(driver)​
+class REG_driver extends uvm_driver #(REG_transaction_in);​
+	`uvm_component_utils(REG_driver)​
 
 	REG_interface_vif vif;
 	REG_transaction_in tr;
@@ -13,7 +13,7 @@ class REG_driver extends uvm_driver #(transaction_in);​
 
     virtual function void build_phase(uvm_phase phase);
 	    super.build_phase(phase);
-	     if(!uvm_config_db#(REG_interface_vif)::get(this, "", "vif", vif)) begin
+	     if(!uvm_config_db#(REG_interface_vif)::get(this, "", "REG_vif", vif)) begin
 	        `uvm_fatal("NOVIF", "failed to get virtual interface")
     	end
 	endfunction
