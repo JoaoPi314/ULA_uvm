@@ -7,13 +7,13 @@ class REG_sequence_in extends uvm_sequence #(REG_transaction_in);​
   endfunction: new​
 
 	task body();​
-	  REG_transaction_in tr;​
+	  	REG_transaction_in tr;​
 		forever begin​
 			tr = REG_transaction_in::type_id::create("tr");​
-      start_item(tr);​
-	      assert(tr.randomize());​
-      finish_item(tr);​
-    end​
+	    	start_item(tr);​
+		    	assert(tr.randomize());​
+	      	finish_item(tr);​
+	    end​
 	endtask​
 
 endclass: REG_sequence_in

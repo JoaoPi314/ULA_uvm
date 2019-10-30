@@ -3,7 +3,7 @@ class coverage extends uvm_component;​
  
   ULA_transaction_in req;​
   ULA_transaction_out resp;​
-  uvm_analysis_imp#(ULA_transaction_in, coverage) ULA_req_port;​
+  //uvm_analysis_imp#(ULA_transaction_in, coverage) ULA_req_port;​
   uvm_analysis_imp#(ULA_transaction_out, coverage) ULA_resp_port;​
   int min_tr;​
   int n_tr = 0;​
@@ -11,9 +11,9 @@ class coverage extends uvm_component;​
 
   function new(string name = "coverage", uvm_component parent= null);​
     super.new(name, parent);​
-    ULA_req_port = new("ULA_req_port", this);​
+ //   ULA_req_port = new("ULA_req_port", this);​
     ULA_resp_port = new("ULA_resp_port", this);​
-    req=new;​
+  //  req=new;​
     resp=new;
     min_tr = 10000;​
   endfunction​

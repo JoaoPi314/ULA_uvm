@@ -27,12 +27,11 @@ class REG_driver extends uvm_driver #(REG_transaction_in);​
 
 	virtual task reset_signals();    ​
 		wait (vif.rst === 0);​
-		forever begin​
 			vif.valid_reg <= '0;  ​
 			vif.data_in  <= '0;​
 			vif.addr <= '0; 
-			@(negedge vif.rst);​
-		end​
+			tr = null;
+			@(posedge vif.rst);​
 	endtask : reset_signals​
 
 	virtual task get_and_drive(uvm_phase phase);​
@@ -40,18 +39,15 @@ class REG_driver extends uvm_driver #(REG_transaction_in);​
 		@(posedge vif.rst);​
 		forever begin​
 			seq_item_port.get_next_item(tr);​
-			driver_transfer(tr);​
+      		@(posedge vif.clk_reg);
+       		$display("To aquii");
+			vif.data_in = tr.data_in;      
+      		vif.addr = tr.addr;
+      		vif.valid_reg  = '1;
+      		@(negedge vif.clk_reg);
 			seq_item_port.item_done();​
 		end​
 	endtask : get_and_drive
 
-	
-  virtual task driver_transfer(REG_transaction_in tr);
-      @(posedge vif.clk_reg);
-      $display("",);
-      vif.data_in <= tr.data_in;      
-      vif.addr <= tr.addr;
-      vif.valid_reg  <= '1;
-  endtask : driver_transfer
 
 endclass: REG_driver
