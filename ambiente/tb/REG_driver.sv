@@ -39,13 +39,15 @@ class REG_driver extends uvm_driver #(REG_transaction_in);
 		@(posedge vif.rst);
 		forever begin
 			seq_item_port.get_next_item(tr);
+			begin_tr(tr, "reg");
       		@(posedge vif.clk_reg);
-       		$display("To aquii");
+       		//$display("To aquii");
 			vif.data_in = tr.data_in;      
       		vif.addr = tr.addr;
       		vif.valid_reg  = '1;
       		@(negedge vif.clk_reg);
 			seq_item_port.item_done();
+			end_tr(tr);
 		end
 	endtask : get_and_drive
 
