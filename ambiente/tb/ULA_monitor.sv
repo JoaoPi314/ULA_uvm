@@ -33,7 +33,6 @@ class ULA_monitor extends uvm_monitor;
     virtual task collect_transactions(uvm_phase phase);
       forever begin
          @(posedge vif.clk_ula) begin
-          @(posedge vif.clk_ula);
           if(!vif.valid_ula) begin
             @(posedge vif.valid_ula)
             begin_tr(tr_in, "ula_req");

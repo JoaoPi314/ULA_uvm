@@ -1,0 +1,130 @@
+# SimVision Command Script (Ter Nov 05 20:27:58 -03 2019)
+#
+# Version 18.09.s011
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision.svcf
+#  or simvision -input simvision.svcf database1 database2 ...
+#
+
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+
+#
+# Databases
+#
+database require waves -search {
+	./waves.shm/waves.trn
+	/mnt/hdd1tera/xmen/UVM_G4/ULA_uvm/ambiente/tb/waves.shm/waves.trn
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 2330x901+85+99}] != ""} {
+    window geometry "Waveform 1" 2330x901+85+99
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 320,000,000fs
+
+set id [waveform add -signals  {
+	{waves::$uvm:{uvm_test_top.env_h.mst_REG.drv}.driver_reg}
+	} ]
+waveform format $id -height 54
+set id [waveform add -signals  {
+	{waves::top.REG_dut_if.addr[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.REG_dut_if.data_in[15:0]}
+	} ]
+waveform format $id -radix %x
+set id [waveform add -signals  {
+	waves::top.REG_dut_if.valid_reg
+	} ]
+set id [waveform add -signals  {
+	{waves::$uvm:{uvm_test_top.env_h.mst_ULA.drv}.req_driver}
+	} ]
+waveform format $id -height 62
+set id [waveform add -signals  {
+	{waves::$uvm:{uvm_test_top.env_h.mst_ULA.mon}.ula_req}
+	} ]
+waveform format $id -height 68
+set id [waveform add -signals  {
+	{waves::top.ULA_dut_if.A[15:0]}
+	} ]
+waveform format $id -radix %x
+set id [waveform add -signals  {
+	waves::top.REG_dut_if.clk_reg
+	} ]
+set id [waveform add -signals  {
+	{waves::$uvm:{uvm_test_top.env_h.sb.rfm}.refmod}
+	} ]
+waveform format $id -height 50
+set id [waveform add -signals  {
+	waves::top.ULA_dut_if.clk_ula
+	} ]
+set id [waveform add -signals  {
+	{waves::top.ULA_dut_if.data_out[31:0]}
+	} ]
+waveform format $id -radix %x
+set id [waveform add -signals  {
+	{waves::top.ULA_dut_if.instru[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.ULA_dut_if.reg_sel[1:0]}
+	} ]
+set id [waveform add -signals  {
+	waves::top.ULA_dut_if.rst
+	} ]
+set id [waveform add -signals  {
+	waves::top.ULA_dut_if.valid_out
+	} ]
+set id [waveform add -signals  {
+	waves::top.ULA_dut_if.valid_ula
+	} ]
+
+waveform xview limits 0 2000ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 600x250+0+0
+
+#
+# Layout selection
+#
+
