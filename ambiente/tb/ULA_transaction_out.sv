@@ -8,11 +8,11 @@ class ULA_transaction_out extends uvm_sequence_item;
   endfunction
 
   `uvm_object_param_utils_begin(ULA_transaction_out)
-    `uvm_field_int(data_out, UVM_HEX)
+    `uvm_field_int(data_out, UVM_UNSIGNED)
   `uvm_object_utils_end
 
   function string convert2string();
-    return $sformatf("{data_o = %h}",data_out);
+    return $sformatf("{data_o = %d}",data_out);
 
   endfunction
 

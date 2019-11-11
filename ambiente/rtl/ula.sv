@@ -17,7 +17,7 @@ module ula (
 // 10 A + 1
 // 11 B + 1
 
-logic [1:0] counter;
+logic [2:0] counter;
 
 logic [31:0] result;
 
@@ -26,9 +26,9 @@ logic [15:0] op_A, op_B;
 
 logic start;
 logic [1:0] reg_instru;
-logic [1:0] op_instru;
+logic [2:0] op_instru;
 
-assign op_instru = (valid_ula && counter == 0) ? instru : reg_instru;
+assign op_instru = (valid_ula && counter == 0) ? {1'b0, instru} : {1'b0, reg_instru};
 
 assign op_A = (valid_ula && counter == 0) ? A : reg_A;
 assign op_B = (valid_ula && counter == 0) ? B : reg_B;
@@ -111,7 +111,7 @@ always_ff @ (posedge clk_ula or negedge rst)
 begin
 	if(~rst)
 	begin
-		counter <= 2'b00;
+		counter <= 3'b000;
 		start <= 0;
 	end
 	else
@@ -123,7 +123,7 @@ begin
 
 		if(start || valid_ula)
 		begin
-			if(counter == op_instru)
+			if(counter == op_instru+1)
 			begin
 				counter <= 0;
 			end

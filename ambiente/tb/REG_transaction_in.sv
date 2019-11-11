@@ -9,8 +9,8 @@ class REG_transaction_in extends uvm_sequence_item;
   endfunction
 
   `uvm_object_param_utils_begin(REG_transaction_in)
-    `uvm_field_int(data_in, UVM_HEX)
-    `uvm_field_int(addr, UVM_HEX)
+    `uvm_field_int(data_in, UVM_UNSIGNED)
+    `uvm_field_int(addr, UVM_UNSIGNED)
   `uvm_object_utils_end
 
   function string convert2string();

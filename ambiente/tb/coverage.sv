@@ -31,10 +31,10 @@ class coverage extends uvm_component;
   endtask: run_phase
 
   function void write(ULA_transaction_out t);
-    n_tr = n_tr + 1;
     if(n_tr >= min_tr)begin
       ->end_of_simulation;
     end
+    n_tr = n_tr + 1;
 
   endfunction: write
 
