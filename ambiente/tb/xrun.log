@@ -1,5 +1,5 @@
 xrun(64): 18.09-s011: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	18.09-s011: Started on Nov 13, 2019 at 10:00:18 -03
+TOOL:	xrun(64)	18.09-s011: Started on Nov 13, 2019 at 12:13:48 -03
 xrun
 	-64bit
 	-uvm
@@ -1105,6 +1105,18 @@ xmvlog: *W,NONPRT (./env.sv,22|32): non-printable character (0x80) ignored.
                                  |
 xmvlog: *W,NONPRT (./env.sv,22|33): non-printable character (0x8b) ignored.
 (`include file: ./env.sv line 22, file: ./pkg.sv line 21)
+    mst_ULA.agt_req_port.connect(cov.ULA_req_port);​
+                                                   |
+xmvlog: *W,NONPRT (./env.sv,23|51): non-printable character (0xe2) ignored.
+(`include file: ./env.sv line 23, file: ./pkg.sv line 21)
+    mst_ULA.agt_req_port.connect(cov.ULA_req_port);​
+                                                    |
+xmvlog: *W,NONPRT (./env.sv,23|52): non-printable character (0x80) ignored.
+(`include file: ./env.sv line 23, file: ./pkg.sv line 21)
+    mst_ULA.agt_req_port.connect(cov.ULA_req_port);​
+                                                     |
+xmvlog: *W,NONPRT (./env.sv,23|53): non-printable character (0x8b) ignored.
+(`include file: ./env.sv line 23, file: ./pkg.sv line 21)
     mst_ULA.agt_resp_port.connect(cov.ULA_resp_port);​
                                                      |
 xmvlog: *W,NONPRT (./env.sv,24|53): non-printable character (0xe2) ignored.
@@ -1307,7 +1319,7 @@ xmvlog: *W,FUNTSK (./REG_monitor.sv,33|20): function called as a task without vo
              |
 xmvlog: *W,FUNTSK (./refmod.sv,134|13): function called as a task without void'().
 	package worklib.pkg:sv
-		errors: 0, warnings: 322
+		errors: 0, warnings: 325
 file: ./ULA_interface_if.sv
 	interface worklib.ULA_interface_if:sv
 		errors: 0, warnings: 0
@@ -1609,12 +1621,12 @@ xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog log
 			streams:   9, words:  5179
 		worklib.cdns_uvm_pkg:sv <0x6b3c7c57>
 			streams:  10, words:  9339
-		worklib.uvm_pkg:sv <0x27415169>
+		worklib.uvm_pkg:sv <0x1807dc73>
 			streams:  26, words: 28229
 		worklib.uvm_pkg:sv <0x520261b0>
 			streams:   7, words:  3126
-		worklib.uvm_pkg:sv <0x46ddd798>
-			streams:  24, words: 27317
+		worklib.uvm_pkg:sv <0x77ddba82>
+			streams:  24, words: 28026
 		worklib.uvm_pkg:sv <0x07294491>
 			streams:  70, words: 84805
 		worklib.uvm_pkg:sv <0x709b2ac0>
@@ -1627,14 +1639,14 @@ xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog log
 			streams:  25, words: 37002
 		worklib.uvm_pkg:sv <0x3c2f215e>
 			streams: 111, words: 174939
-		worklib.uvm_pkg:sv <0x7e29bab9>
+		worklib.uvm_pkg:sv <0x2a347936>
 			streams: 278, words: 331906
 		worklib.uvm_pkg:sv <0x69bab019>
 			streams:   7, words:  3126
-		worklib.pkg:sv <0x69dff5a1>
+		worklib.pkg:sv <0x0d590642>
 			streams:  46, words: 61098
-		worklib.pkg:sv <0x636d305f>
-			streams:  40, words: 37426
+		worklib.pkg:sv <0x2a645302>
+			streams:  42, words: 39733
 		worklib.uvm_pkg:sv <0x7b3f5588>
 			streams: 104, words: 177235
 		worklib.uvm_pkg:sv <0x17cc16e0>
@@ -1665,6 +1677,8 @@ logic [15:0] registers [4];
                      |
 xmelab: *W,COVMDD (../rtl/rb.sv,16|21): Toggle coverage for bit, logic, reg, wire, and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage on for these types specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
 	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                       Instances  Unique
@@ -1681,6 +1695,7 @@ xmelab: *W,COVMDD (../rtl/rb.sv,16|21): Toggle coverage for bit, logic, reg, wir
 		Cont. assignments:             3       3
 		Pseudo assignments:           23      23
 		Assertions:                    4       4
+		Covergroup Instances:          0       1
 		SV Class declarations:       215     323
 		SV Class specializations:    446     446
 	Writing initial simulation snapshot: worklib.top:sv
@@ -2167,558 +2182,7 @@ UVM_INFO @ 32200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      3
 UVM_INFO @ 32300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13674}
 UVM_INFO @ 32360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      73643}
 UVM_INFO @ 32420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31339}
-UVM_INFO @ 32480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2347}
-UVM_INFO @ 32560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55071}
-UVM_INFO @ 32660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53397}
-UVM_INFO @ 32760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50405}
-UVM_INFO @ 32860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21568}
-UVM_INFO @ 32920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      17098}
-UVM_INFO @ 32980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      78741}
-UVM_INFO @ 33020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22897}
-UVM_INFO @ 33100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5561}
-UVM_INFO @ 33160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      35737}
-UVM_INFO @ 33240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56522}
-UVM_INFO @ 33340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41155}
-UVM_INFO @ 33420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18871}
-UVM_INFO @ 33500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40544}
-UVM_INFO @ 33560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      70943}
-UVM_INFO @ 33640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16284}
-UVM_INFO @ 33740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      47265}
-UVM_INFO @ 33800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19000}
-UVM_INFO @ 33880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26165}
-UVM_INFO @ 33980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29898}
-UVM_INFO @ 34040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      60662}
-UVM_INFO @ 34120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29898}
-UVM_INFO @ 34220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      46539}
-UVM_INFO @ 34280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      47238}
-UVM_INFO @ 34340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29262}
-UVM_INFO @ 34420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      47242}
-UVM_INFO @ 34520: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      49033}
-UVM_INFO @ 34600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33128}
-UVM_INFO @ 34660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38838}
-UVM_INFO @ 34740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      61473}
-UVM_INFO @ 34800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33618}
-UVM_INFO @ 34860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10596}
-UVM_INFO @ 34900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39887}
-UVM_INFO @ 35000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26195}
-UVM_INFO @ 35100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2686}
-UVM_INFO @ 35160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9409}
-UVM_INFO @ 35220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      60876}
-UVM_INFO @ 35280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7843}
-UVM_INFO @ 35360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50915}
-UVM_INFO @ 35420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      86282}
-UVM_INFO @ 35500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54368}
-UVM_INFO @ 35560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      71245}
-UVM_INFO @ 35620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27299}
-UVM_INFO @ 35680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19241}
-UVM_INFO @ 35740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31784}
-UVM_INFO @ 35840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23209}
-UVM_INFO @ 35920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      42450}
-UVM_INFO @ 36000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64583}
-UVM_INFO @ 36060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      82645}
-UVM_INFO @ 36140: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      49613}
-UVM_INFO @ 36240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        396}
-UVM_INFO @ 36300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21658}
-UVM_INFO @ 36360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     119214}
-UVM_INFO @ 36400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     103490}
-UVM_INFO @ 36460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57982}
-UVM_INFO @ 36520: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      51248}
-UVM_INFO @ 36560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50921}
-UVM_INFO @ 36620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1385}
-UVM_INFO @ 36680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      72341}
-UVM_INFO @ 36720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30710}
-UVM_INFO @ 36780: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56706}
-UVM_INFO @ 36840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      77588}
-UVM_INFO @ 36880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      79181}
-UVM_INFO @ 36920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13357}
-UVM_INFO @ 36980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      88795}
-UVM_INFO @ 37060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7084}
-UVM_INFO @ 37120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29335}
-UVM_INFO @ 37220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15355}
-UVM_INFO @ 37320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      65437}
-UVM_INFO @ 37380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      87946}
-UVM_INFO @ 37440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29963}
-UVM_INFO @ 37500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2162}
-UVM_INFO @ 37580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20921}
-UVM_INFO @ 37640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      82510}
-UVM_INFO @ 37680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56517}
-UVM_INFO @ 37720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      12771}
-UVM_INFO @ 37820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22683}
-UVM_INFO @ 37900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      44816}
-UVM_INFO @ 38000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       4479}
-UVM_INFO @ 38060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      42445}
-UVM_INFO @ 38120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33959}
-UVM_INFO @ 38160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      62770}
-UVM_INFO @ 38220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22787}
-UVM_INFO @ 38280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22357}
-UVM_INFO @ 38360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6361}
-UVM_INFO @ 38420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      17954}
-UVM_INFO @ 38500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58249}
-UVM_INFO @ 38600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26752}
-UVM_INFO @ 38660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      17870}
-UVM_INFO @ 38720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      67298}
-UVM_INFO @ 38760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      25172}
-UVM_INFO @ 38800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23861}
-UVM_INFO @ 38860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     101724}
-UVM_INFO @ 38900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      59971}
-UVM_INFO @ 38960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36836}
-UVM_INFO @ 39020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23647}
-UVM_INFO @ 39080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      25677}
-UVM_INFO @ 39160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8849}
-UVM_INFO @ 39220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3830}
-UVM_INFO @ 39280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33183}
-UVM_INFO @ 39360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27244}
-UVM_INFO @ 39420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     110604}
-UVM_INFO @ 39460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      82581}
-UVM_INFO @ 39500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20669}
-UVM_INFO @ 39560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36856}
-UVM_INFO @ 39640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53670}
-UVM_INFO @ 39700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24951}
-UVM_INFO @ 39780: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18517}
-UVM_INFO @ 39860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40912}
-UVM_INFO @ 39960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      34136}
-UVM_INFO @ 40040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      52175}
-UVM_INFO @ 40100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2254}
-UVM_INFO @ 40180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40361}
-UVM_INFO @ 40240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      65490}
-UVM_INFO @ 40280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10020}
-UVM_INFO @ 40320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33074}
-UVM_INFO @ 40380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13041}
-UVM_INFO @ 40460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24556}
-UVM_INFO @ 40540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      63071}
-UVM_INFO @ 40600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     117029}
-UVM_INFO @ 40680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57146}
-UVM_INFO @ 40740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56578}
-UVM_INFO @ 40800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28366}
-UVM_INFO @ 40860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2745}
-UVM_INFO @ 40920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37795}
-UVM_INFO @ 41020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39696}
-UVM_INFO @ 41100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      32427}
-UVM_INFO @ 41180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      51788}
-UVM_INFO @ 41240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      75663}
-UVM_INFO @ 41320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      60168}
-UVM_INFO @ 41420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        714}
-UVM_INFO @ 41480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5686}
-UVM_INFO @ 41580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      48972}
-UVM_INFO @ 41680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22634}
-UVM_INFO @ 41740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16677}
-UVM_INFO @ 41800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     106980}
-UVM_INFO @ 41840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     121393}
-UVM_INFO @ 41880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30261}
-UVM_INFO @ 41980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16097}
-UVM_INFO @ 42080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28492}
-UVM_INFO @ 42140: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55548}
-UVM_INFO @ 42240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39643}
-UVM_INFO @ 42340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      52681}
-UVM_INFO @ 42400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      95876}
-UVM_INFO @ 42460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55313}
-UVM_INFO @ 42540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36367}
-UVM_INFO @ 42640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      34337}
-UVM_INFO @ 42700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5626}
-UVM_INFO @ 42760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        150}
-UVM_INFO @ 42840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33964}
-UVM_INFO @ 42900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      74387}
-UVM_INFO @ 42940: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      59786}
-UVM_INFO @ 42980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40273}
-UVM_INFO @ 43040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       4792}
-UVM_INFO @ 43120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      32228}
-UVM_INFO @ 43220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5369}
-UVM_INFO @ 43280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      76254}
-UVM_INFO @ 43320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37668}
-UVM_INFO @ 43360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      76019}
-UVM_INFO @ 43420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50106}
-UVM_INFO @ 43480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19645}
-UVM_INFO @ 43560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      62749}
-UVM_INFO @ 43620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      83916}
-UVM_INFO @ 43700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39885}
-UVM_INFO @ 43800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28568}
-UVM_INFO @ 43860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43928}
-UVM_INFO @ 43920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      99439}
-UVM_INFO @ 43960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      68654}
-UVM_INFO @ 44020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39962}
-UVM_INFO @ 44080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1707}
-UVM_INFO @ 44140: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8531}
-UVM_INFO @ 44220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41965}
-UVM_INFO @ 44280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31060}
-UVM_INFO @ 44340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7963}
-UVM_INFO @ 44420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24814}
-UVM_INFO @ 44480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27853}
-UVM_INFO @ 44540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53985}
-UVM_INFO @ 44620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54046}
-UVM_INFO @ 44680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7010}
-UVM_INFO @ 44740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      35192}
-UVM_INFO @ 44820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64124}
-UVM_INFO @ 44880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      92005}
-UVM_INFO @ 44920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      72861}
-UVM_INFO @ 44960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13259}
-UVM_INFO @ 45020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      98391}
-UVM_INFO @ 45100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8162}
-UVM_INFO @ 45160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      66358}
-UVM_INFO @ 45240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31967}
-UVM_INFO @ 45320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55613}
-UVM_INFO @ 45420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64730}
-UVM_INFO @ 45480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29364}
-UVM_INFO @ 45540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15468}
-UVM_INFO @ 45600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3526}
-UVM_INFO @ 45700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      25353}
-UVM_INFO @ 45800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20830}
-UVM_INFO @ 45900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20340}
-UVM_INFO @ 45960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3364}
-UVM_INFO @ 46020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      12107}
-UVM_INFO @ 46080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43731}
-UVM_INFO @ 46180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6318}
-UVM_INFO @ 46260: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5921}
-UVM_INFO @ 46360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29822}
-UVM_INFO @ 46420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      62815}
-UVM_INFO @ 46500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58563}
-UVM_INFO @ 46560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     109393}
-UVM_INFO @ 46600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56712}
-UVM_INFO @ 46660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      92025}
-UVM_INFO @ 46700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15450}
-UVM_INFO @ 46780: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57402}
-UVM_INFO @ 46840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      62375}
-UVM_INFO @ 46900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9819}
-UVM_INFO @ 47000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50510}
-UVM_INFO @ 47060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6498}
-UVM_INFO @ 47120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6572}
-UVM_INFO @ 47220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55808}
-UVM_INFO @ 47280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38454}
-UVM_INFO @ 47340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19690}
-UVM_INFO @ 47440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50798}
-UVM_INFO @ 47500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9268}
-UVM_INFO @ 47560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24751}
-UVM_INFO @ 47640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64930}
-UVM_INFO @ 47700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58240}
-UVM_INFO @ 47740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      35875}
-UVM_INFO @ 47780: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40077}
-UVM_INFO @ 47840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      94886}
-UVM_INFO @ 47920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      59142}
-UVM_INFO @ 47980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30711}
-UVM_INFO @ 48040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      51588}
-UVM_INFO @ 48120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      45330}
-UVM_INFO @ 48220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3165}
-UVM_INFO @ 48280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10576}
-UVM_INFO @ 48340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      76112}
-UVM_INFO @ 48380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30611}
-UVM_INFO @ 48480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13873}
-UVM_INFO @ 48560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50474}
-UVM_INFO @ 48660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      60766}
-UVM_INFO @ 48720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9314}
-UVM_INFO @ 48780: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      83355}
-UVM_INFO @ 48820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       4371}
-UVM_INFO @ 48900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54490}
-UVM_INFO @ 48980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      44540}
-UVM_INFO @ 49060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      61589}
-UVM_INFO @ 49120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43662}
-UVM_INFO @ 49200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3564}
-UVM_INFO @ 49300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26172}
-UVM_INFO @ 49360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       4489}
-UVM_INFO @ 49420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      59429}
-UVM_INFO @ 49460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41863}
-UVM_INFO @ 49500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      14423}
-UVM_INFO @ 49560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     115766}
-UVM_INFO @ 49600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     100148}
-UVM_INFO @ 49660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13081}
-UVM_INFO @ 49720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     124912}
-UVM_INFO @ 49760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19928}
-UVM_INFO @ 49820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53149}
-UVM_INFO @ 49880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      92178}
-UVM_INFO @ 49920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28428}
-UVM_INFO @ 49960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =         94}
-UVM_INFO @ 50020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57967}
-UVM_INFO @ 50060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19937}
-UVM_INFO @ 50100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26924}
-UVM_INFO @ 50200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37213}
-UVM_INFO @ 50300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3937}
-UVM_INFO @ 50360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     104505}
-UVM_INFO @ 50420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41097}
-UVM_INFO @ 50500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50760}
-UVM_INFO @ 50600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      61131}
-UVM_INFO @ 50660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15733}
-UVM_INFO @ 50720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      66792}
-UVM_INFO @ 50760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10065}
-UVM_INFO @ 50860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15450}
-UVM_INFO @ 50960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64318}
-UVM_INFO @ 51060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50449}
-UVM_INFO @ 51120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9209}
-UVM_INFO @ 51180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9941}
-UVM_INFO @ 51240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54879}
-UVM_INFO @ 51340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      61482}
-UVM_INFO @ 51420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      44414}
-UVM_INFO @ 51520: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16991}
-UVM_INFO @ 51580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10710}
-UVM_INFO @ 51640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      76114}
-UVM_INFO @ 51680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      59009}
-UVM_INFO @ 51740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20500}
-UVM_INFO @ 51800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        897}
-UVM_INFO @ 51860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22703}
-UVM_INFO @ 51960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      11265}
-UVM_INFO @ 52020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8853}
-UVM_INFO @ 52100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16199}
-UVM_INFO @ 52200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29245}
-UVM_INFO @ 52280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      59293}
-UVM_INFO @ 52360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23034}
-UVM_INFO @ 52460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      63851}
-UVM_INFO @ 52540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31512}
-UVM_INFO @ 52620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10714}
-UVM_INFO @ 52720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27757}
-UVM_INFO @ 52800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50115}
-UVM_INFO @ 52880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      44777}
-UVM_INFO @ 52980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8901}
-UVM_INFO @ 53040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      14157}
-UVM_INFO @ 53100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36094}
-UVM_INFO @ 53180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31274}
-UVM_INFO @ 53240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22510}
-UVM_INFO @ 53300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57015}
-UVM_INFO @ 53340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5083}
-UVM_INFO @ 53440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29690}
-UVM_INFO @ 53540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26810}
-UVM_INFO @ 53600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      95901}
-UVM_INFO @ 53660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64061}
-UVM_INFO @ 53720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30984}
-UVM_INFO @ 53800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7464}
-UVM_INFO @ 53860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53258}
-UVM_INFO @ 53900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     110254}
-UVM_INFO @ 53940: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      73021}
-UVM_INFO @ 54000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21650}
-UVM_INFO @ 54080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43541}
-UVM_INFO @ 54160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26896}
-UVM_INFO @ 54220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      44369}
-UVM_INFO @ 54300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7121}
-UVM_INFO @ 54360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      47048}
-UVM_INFO @ 54400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1781}
-UVM_INFO @ 54460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40151}
-UVM_INFO @ 54500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3918}
-UVM_INFO @ 54580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10989}
-UVM_INFO @ 54640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13598}
-UVM_INFO @ 54720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43465}
-UVM_INFO @ 54820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27546}
-UVM_INFO @ 54900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      52864}
-UVM_INFO @ 54980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      32526}
-UVM_INFO @ 55040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54859}
-UVM_INFO @ 55100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7311}
-UVM_INFO @ 55180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2433}
-UVM_INFO @ 55240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29275}
-UVM_INFO @ 55300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8140}
-UVM_INFO @ 55380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18724}
-UVM_INFO @ 55480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28110}
-UVM_INFO @ 55560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55352}
-UVM_INFO @ 55640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15860}
-UVM_INFO @ 55740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43493}
-UVM_INFO @ 55800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30137}
-UVM_INFO @ 55860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      52480}
-UVM_INFO @ 55940: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      62348}
-UVM_INFO @ 56000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      17025}
-UVM_INFO @ 56060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43343}
-UVM_INFO @ 56100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7166}
-UVM_INFO @ 56200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53373}
-UVM_INFO @ 56300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56686}
-UVM_INFO @ 56360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      86562}
-UVM_INFO @ 56420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      52664}
-UVM_INFO @ 56480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3914}
-UVM_INFO @ 56560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58831}
-UVM_INFO @ 56620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7460}
-UVM_INFO @ 56700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37408}
-UVM_INFO @ 56760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54913}
-UVM_INFO @ 56820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1936}
-UVM_INFO @ 56880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41491}
-UVM_INFO @ 56960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       4410}
-UVM_INFO @ 57060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41070}
-UVM_INFO @ 57160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5233}
-UVM_INFO @ 57260: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      63770}
-UVM_INFO @ 57320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6584}
-UVM_INFO @ 57380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50918}
-UVM_INFO @ 57420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      66155}
-UVM_INFO @ 57480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      11568}
-UVM_INFO @ 57540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16009}
-UVM_INFO @ 57600: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2684}
-UVM_INFO @ 57680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      63853}
-UVM_INFO @ 57740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21341}
-UVM_INFO @ 57800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57555}
-UVM_INFO @ 57900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26557}
-UVM_INFO @ 57960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23480}
-UVM_INFO @ 58020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37650}
-UVM_INFO @ 58120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26794}
-UVM_INFO @ 58180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24978}
-UVM_INFO @ 58240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3102}
-UVM_INFO @ 58320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40251}
-UVM_INFO @ 58380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2560}
-UVM_INFO @ 58440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      17474}
-UVM_INFO @ 58520: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15922}
-UVM_INFO @ 58580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     106903}
-UVM_INFO @ 58620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39565}
-UVM_INFO @ 58660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7120}
-UVM_INFO @ 58760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64603}
-UVM_INFO @ 58860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36880}
-UVM_INFO @ 58920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50263}
-UVM_INFO @ 58980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      52149}
-UVM_INFO @ 59040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19022}
-UVM_INFO @ 59120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24622}
-UVM_INFO @ 59180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      78750}
-UVM_INFO @ 59220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57630}
-UVM_INFO @ 59260: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      82144}
-UVM_INFO @ 59320: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31411}
-UVM_INFO @ 59400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      35069}
-UVM_INFO @ 59480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        191}
-UVM_INFO @ 59540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      60547}
-UVM_INFO @ 59620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      60877}
-UVM_INFO @ 59680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      75935}
-UVM_INFO @ 59740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      65130}
-UVM_INFO @ 59800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27867}
-UVM_INFO @ 59860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33335}
-UVM_INFO @ 59960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      24634}
-UVM_INFO @ 60040: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37765}
-UVM_INFO @ 60120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      49269}
-UVM_INFO @ 60180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      73476}
-UVM_INFO @ 60240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22202}
-UVM_INFO @ 60340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      47407}
-UVM_INFO @ 60400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      46402}
-UVM_INFO @ 60480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       8810}
-UVM_INFO @ 60580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      48106}
-UVM_INFO @ 60640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      37613}
-UVM_INFO @ 60720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36811}
-UVM_INFO @ 60820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43688}
-UVM_INFO @ 60880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      76015}
-UVM_INFO @ 60960: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15437}
-UVM_INFO @ 61060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50622}
-UVM_INFO @ 61120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      79634}
-UVM_INFO @ 61180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      30558}
-UVM_INFO @ 61260: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53830}
-UVM_INFO @ 61360: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      63780}
-UVM_INFO @ 61440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      50299}
-UVM_INFO @ 61500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3546}
-UVM_INFO @ 61580: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23692}
-UVM_INFO @ 61640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     112949}
-UVM_INFO @ 61680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      97606}
-UVM_INFO @ 61720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38832}
-UVM_INFO @ 61820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43729}
-UVM_INFO @ 61920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28945}
-UVM_INFO @ 62020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23205}
-UVM_INFO @ 62080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43518}
-UVM_INFO @ 62140: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33833}
-UVM_INFO @ 62200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      53077}
-UVM_INFO @ 62300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7684}
-UVM_INFO @ 62400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      45678}
-UVM_INFO @ 62500: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56027}
-UVM_INFO @ 62560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1875}
-UVM_INFO @ 62620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      88953}
-UVM_INFO @ 62660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1766}
-UVM_INFO @ 62740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28669}
-UVM_INFO @ 62800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10395}
-UVM_INFO @ 62880: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56520}
-UVM_INFO @ 62980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10800}
-UVM_INFO @ 63060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      61294}
-UVM_INFO @ 63160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21518}
-UVM_INFO @ 63220: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      96662}
-UVM_INFO @ 63300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38480}
-UVM_INFO @ 63400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21518}
-UVM_INFO @ 63460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21151}
-UVM_INFO @ 63560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      32652}
-UVM_INFO @ 63660: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38294}
-UVM_INFO @ 63720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10053}
-UVM_INFO @ 63820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5738}
-UVM_INFO @ 63920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      16796}
-UVM_INFO @ 63980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10992}
-UVM_INFO @ 64080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      27170}
-UVM_INFO @ 64180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9731}
-UVM_INFO @ 64240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      68714}
-UVM_INFO @ 64300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        527}
-UVM_INFO @ 64380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      55181}
-UVM_INFO @ 64480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      54312}
-UVM_INFO @ 64560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      48878}
-UVM_INFO @ 64620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      32099}
-UVM_INFO @ 64700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19499}
-UVM_INFO @ 64760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      40670}
-UVM_INFO @ 64800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      95808}
-UVM_INFO @ 64840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6231}
-UVM_INFO @ 64940: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      57465}
-UVM_INFO @ 65020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58084}
-UVM_INFO @ 65120: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22148}
-UVM_INFO @ 65180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      11293}
-UVM_INFO @ 65240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      66614}
-UVM_INFO @ 65280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22023}
-UVM_INFO @ 65380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33347}
-UVM_INFO @ 65460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      51633}
-UVM_INFO @ 65560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58322}
-UVM_INFO @ 65620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18814}
-UVM_INFO @ 65680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      63797}
-UVM_INFO @ 65720: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      92808}
-UVM_INFO @ 65780: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2296}
-UVM_INFO @ 65840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29207}
-UVM_INFO @ 65900: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        869}
-UVM_INFO @ 66000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15580}
-UVM_INFO @ 66080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29377}
-UVM_INFO @ 66160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38109}
-UVM_INFO @ 66260: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      35291}
-UVM_INFO @ 66340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       5497}
-UVM_INFO @ 66420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29690}
-UVM_INFO @ 66480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      58304}
-UVM_INFO @ 66540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28000}
-UVM_INFO @ 66620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       2117}
-UVM_INFO @ 66680: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31160}
-UVM_INFO @ 66740: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31349}
-UVM_INFO @ 66820: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20927}
-UVM_INFO @ 66920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      31922}
-UVM_INFO @ 67000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15544}
-UVM_INFO @ 67080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20583}
-UVM_INFO @ 67180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      48346}
-UVM_INFO @ 67240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15725}
-UVM_INFO @ 67300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      29311}
-UVM_INFO @ 67380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      48584}
-UVM_INFO @ 67440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     113107}
-UVM_INFO @ 67480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      32889}
-UVM_INFO @ 67520: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20475}
-UVM_INFO @ 67620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13611}
-UVM_INFO @ 67700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      35703}
-UVM_INFO @ 67800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      62445}
-UVM_INFO @ 67860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      36891}
-UVM_INFO @ 67920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      21682}
-UVM_INFO @ 67980: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6663}
-UVM_INFO @ 68080: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38687}
-UVM_INFO @ 68180: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      47894}
-UVM_INFO @ 68280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      26912}
-UVM_INFO @ 68340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      13326}
-UVM_INFO @ 68400: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      74786}
-UVM_INFO @ 68440: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       9623}
-UVM_INFO @ 68540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      56157}
-UVM_INFO @ 68620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       6167}
-UVM_INFO @ 68700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      15359}
-UVM_INFO @ 68760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      85716}
-UVM_INFO @ 68840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      42577}
-UVM_INFO @ 68940: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33176}
-UVM_INFO @ 69000: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      39175}
-UVM_INFO @ 69060: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      28344}
-UVM_INFO @ 69100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      92933}
-UVM_INFO @ 69140: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3968}
-UVM_INFO @ 69200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      33073}
-UVM_INFO @ 69240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23112}
-UVM_INFO @ 69280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18419}
-UVM_INFO @ 69340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     106327}
-UVM_INFO @ 69380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38385}
-UVM_INFO @ 69420: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3100}
-UVM_INFO @ 69480: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      74710}
-UVM_INFO @ 69520: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      95670}
-UVM_INFO @ 69560: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       4209}
-UVM_INFO @ 69620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      82460}
-UVM_INFO @ 69700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      43996}
-UVM_INFO @ 69760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      71385}
-UVM_INFO @ 69840: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      64669}
-UVM_INFO @ 69920: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      22616}
-UVM_INFO @ 70020: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      20993}
-UVM_INFO @ 70100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      10768}
-UVM_INFO @ 70160: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7236}
-UVM_INFO @ 70240: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      41380}
-UVM_INFO @ 70300: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      38842}
-UVM_INFO @ 70340: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     105889}
-UVM_INFO @ 70380: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      89094}
-UVM_INFO @ 70460: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      61450}
-UVM_INFO @ 70540: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =        567}
-UVM_INFO @ 70640: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      51587}
-UVM_INFO @ 70700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      23003}
-UVM_INFO @ 70760: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =     110697}
-UVM_INFO @ 70800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18924}
-UVM_INFO @ 70860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      44905}
-UVM_INFO /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 70860: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 32460: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 
 --- UVM Report catcher Summary ---
 
@@ -2733,18 +2197,21 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO : 1003
+UVM_INFO :  452
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
-[Comparator Match]  1000
+[Comparator Match]   449
 [RNTST]     1
 [TEST_DONE]     1
 [UVM_CMDLINE_PROC]     1
-Simulation complete via $finish(1) at time 70860 NS + 48
+Simulation complete via $finish(1) at time 32460 NS + 50
 /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "instructions" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 24.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "instructions" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 24.
 
 coverage setup:
   workdir  :  ./cov_work
@@ -2753,6 +2220,6 @@ coverage setup:
   testname :  simple_test
 
 coverage files:
-  model(design data) :  ./cov_work/scope/icc_303bca10_00000000.ucm
-  data               :  ./cov_work/scope/simple_test/icc_303bca10_00000000.ucd
-TOOL:	xrun(64)	18.09-s011: Exiting on Nov 13, 2019 at 10:00:28 -03  (total: 00:00:10)
+  model(design data) :  ./cov_work/scope/icc_303bca10_36e01f75.ucm
+  data               :  ./cov_work/scope/simple_test/icc_303bca10_36e01f75.ucd
+TOOL:	xrun(64)	18.09-s011: Exiting on Nov 13, 2019 at 12:13:56 -03  (total: 00:00:08)

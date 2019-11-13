@@ -12,6 +12,16 @@ class coverage extends uvm_component;
   int min_tr;
   int n_tr = 0;
   event end_of_simulation;
+  
+  covergroup instructions;
+    option.at_least = 100;
+    instru:coverpoint req.instru {
+                                  bins soma  = {2'b00};
+                                  bins sub   = {2'b01};
+                                  bins incrA = {2'b10};
+                                  bins incrR = {2'b11};
+                                 }
+  endgroup : instructions
 
   function new(string name = "coverage", uvm_component parent= null);
     super.new(name, parent);
@@ -19,9 +29,8 @@ class coverage extends uvm_component;
     ULA_resp_port = new("ULA_resp_port", this);
     req=new;
     resp=new;
-    min_tr = 1000;
-
-          
+    min_tr = 1000; 
+    instructions = new;
   endfunction
 
   function void build_phase(uvm_phase phase);
@@ -44,20 +53,13 @@ class coverage extends uvm_component;
   endfunction
 
   function void write_ULAreq(ULA_transaction_in t);
-    req = ULA_transaction_in#()::type_id::create("req", this);
     req.copy(t);
+    instructions.sample();
+    if($get_coverage() == 100)
+       ->end_of_simulation;
   endfunction
 
-/*
-  covergroup instructions;
-    coverpoint req.instru {
-                            bins soma  = {2'b00};
-                            bins sub   = {2'b01};
-                            bins incrA = {2'b10};
-                            bins incrR = {2'b11};
-                          }
-  endgroup : instructions
-*/
+
 
 
 
