@@ -12,7 +12,9 @@ class coverage extends uvm_component;
   int min_tr;
   int n_tr = 0;
   event end_of_simulation;
-  
+///////////////////////////////////////////////////////////////////////////////////////////////
+//**************************Cobertura das instruções ******************************************
+///////////////////////////////////////////////////////////////////////////////////////////////
   covergroup instructions;
     option.at_least = 100;
     instru:coverpoint req.instru {
@@ -42,7 +44,6 @@ class coverage extends uvm_component;
     phase.raise_objection(this);
     @(end_of_simulation);
     phase.drop_objection(this);
-
   endtask: run_phase
 
   function void write_ULAresp(ULA_transaction_out t);

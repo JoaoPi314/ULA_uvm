@@ -1,5 +1,5 @@
 xrun(64): 18.09-s011: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	18.09-s011: Started on Nov 13, 2019 at 12:13:48 -03
+TOOL:	xrun(64)	18.09-s011: Started on Nov 13, 2019 at 13:02:30 -03
 xrun
 	-64bit
 	-uvm
@@ -1621,49 +1621,49 @@ xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog log
 			streams:   9, words:  5179
 		worklib.cdns_uvm_pkg:sv <0x6b3c7c57>
 			streams:  10, words:  9339
-		worklib.uvm_pkg:sv <0x1807dc73>
+		worklib.uvm_pkg:sv <0x27739cf7>
 			streams:  26, words: 28229
 		worklib.uvm_pkg:sv <0x520261b0>
 			streams:   7, words:  3126
-		worklib.uvm_pkg:sv <0x77ddba82>
+		worklib.uvm_pkg:sv <0x0892940b>
 			streams:  24, words: 28026
-		worklib.uvm_pkg:sv <0x07294491>
+		worklib.uvm_pkg:sv <0x0d368e1f>
 			streams:  70, words: 84805
-		worklib.uvm_pkg:sv <0x709b2ac0>
+		worklib.uvm_pkg:sv <0x63f3d665>
 			streams: 112, words: 177103
-		worklib.uvm_pkg:sv <0x625bc3dd>
+		worklib.uvm_pkg:sv <0x10e2c69d>
 			streams:  70, words: 83581
 		worklib.uvm_pkg:sv <0x5a319369>
 			streams:   9, words:  5110
-		worklib.uvm_pkg:sv <0x219adba9>
+		worklib.uvm_pkg:sv <0x3f8e84cb>
 			streams:  25, words: 37002
-		worklib.uvm_pkg:sv <0x3c2f215e>
+		worklib.uvm_pkg:sv <0x5eaf1ace>
 			streams: 111, words: 174939
-		worklib.uvm_pkg:sv <0x2a347936>
+		worklib.uvm_pkg:sv <0x678b845a>
 			streams: 278, words: 331906
 		worklib.uvm_pkg:sv <0x69bab019>
 			streams:   7, words:  3126
-		worklib.pkg:sv <0x0d590642>
+		worklib.pkg:sv <0x189376eb>
 			streams:  46, words: 61098
-		worklib.pkg:sv <0x2a645302>
+		worklib.pkg:sv <0x71b58a44>
 			streams:  42, words: 39733
-		worklib.uvm_pkg:sv <0x7b3f5588>
+		worklib.uvm_pkg:sv <0x13b07231>
 			streams: 104, words: 177235
 		worklib.uvm_pkg:sv <0x17cc16e0>
 			streams:   7, words:  3126
-		worklib.uvm_pkg:sv <0x419f59d0>
+		worklib.uvm_pkg:sv <0x2e42b1e8>
 			streams:  23, words: 28751
-		worklib.uvm_pkg:sv <0x5963d7a6>
+		worklib.uvm_pkg:sv <0x28ab1e9a>
 			streams: 219, words: 293141
-		worklib.uvm_pkg:sv <0x00c98a1b>
+		worklib.uvm_pkg:sv <0x4d100c69>
 			streams:  23, words: 35740
-		worklib.uvm_pkg:sv <0x14066d4c>
+		worklib.uvm_pkg:sv <0x5e650129>
 			streams: 219, words: 293141
-		worklib.uvm_pkg:sv <0x4831760e>
+		worklib.uvm_pkg:sv <0x27dc421f>
 			streams:  23, words: 32230
-		worklib.top:sv <0x4a27219a>
+		worklib.top:sv <0x3773791b>
 			streams: 152, words: 251701
-		worklib.pkg:sv <0x7e028f53>
+		worklib.pkg:sv <0x333b24fb>
 			streams:   0, words:     0
 		worklib.cdns_uvm_pkg:sv <0x48003cd0>
 			streams: 136, words: 284984
@@ -2210,8 +2210,8 @@ Simulation complete via $finish(1) at time 32460 NS + 50
 /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
 xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
-xmsim: *W,CGPIZE: Instance coverage for covergroup instance "instructions" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 24.
-xmsim: *W,CGPIZE: Instance coverage for covergroup instance "instructions" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 24.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "instructions" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 26.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "instructions" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 26.
 
 coverage setup:
   workdir  :  ./cov_work
@@ -2222,4 +2222,4 @@ coverage setup:
 coverage files:
   model(design data) :  ./cov_work/scope/icc_303bca10_36e01f75.ucm
   data               :  ./cov_work/scope/simple_test/icc_303bca10_36e01f75.ucd
-TOOL:	xrun(64)	18.09-s011: Exiting on Nov 13, 2019 at 12:13:56 -03  (total: 00:00:08)
+TOOL:	xrun(64)	18.09-s011: Exiting on Nov 13, 2019 at 13:02:37 -03  (total: 00:00:07)
