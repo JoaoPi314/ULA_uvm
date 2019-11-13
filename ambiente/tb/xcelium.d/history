@@ -2,4 +2,4 @@
 // File created by:  xrun
 // Do not modify this file
 
-s1::(13Nov2019:07:39:30):( xrun -64bit -uvm ./pkg.sv ./ULA_interface_if.sv ./REG_interface_if.sv ../rtl/ula.sv ../rtl/rb.sv ../rtl/mux.sv ../rtl/datapath.sv top.sv -sv_lib test.so +UVM_TESTNAME=simple_test -covtest simple_test -access +r -input ./shm.tcl +uvm_set_config_int=*,recording_detail,1 -coverage all -covoverwrite )
+s1::(13Nov2019:10:00:18):( xrun -64bit -uvm ./pkg.sv ./ULA_interface_if.sv ./REG_interface_if.sv ../rtl/ula.sv ../rtl/rb.sv ../rtl/mux.sv ../rtl/datapath.sv top.sv -sv_lib test.so +UVM_TESTNAME=simple_test -covtest simple_test -access +r -input ./shm.tcl +uvm_set_config_int=*,recording_detail,1 -coverage all -covoverwrite )
