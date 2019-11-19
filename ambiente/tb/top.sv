@@ -32,12 +32,6 @@ module top;​
     .valid_out    (ULA_dut_if.valid_out )
   );
 
-/*
-  coverage cov = new();
-  initial begin
-    cov.instructions.sample();
-  end
-*/
 
   initial begin
     `ifdef XCELIUM
