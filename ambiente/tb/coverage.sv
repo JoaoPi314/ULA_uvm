@@ -56,12 +56,8 @@ class coverage extends uvm_component;
                         bins r_medio   = {[16'h4e20:16'h7530]};//20000-30000
                         bins r_grande  = {[16'hc350:16'hea60]};//50000 -60000
                        }
-
+    AxR: cross A, register{option.at_least = 200;}
   endgroup: combinations
-
-  //Para verificar em combinação com os registradores, tenho que fazer uma nova
-  //porta. Fazer depois porque quero descobrir como separo os testes
-  //Falta fazer o cross nas combinações
 
 
   function new(string name = "coverage", uvm_component parent= null);

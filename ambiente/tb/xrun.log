@@ -1,5 +1,5 @@
-xrun(64): 18.09-s011: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	18.09-s011: Started on Nov 19, 2019 at 12:04:40 -03
+xrun(64): 19.09-s003: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.09-s003: Started on Nov 20, 2019 at 12:50:40 -03
 xrun
 	-64bit
 	-uvm
@@ -23,7 +23,7 @@ xrun
    User defined plus("+") options:
 	+uvm_set_config_int=*,recording_detail,1
 
-Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /usr/local/cds/XCELIUM1909/tools/methodology/UVM/CDNS-1.1d
 file: ./pkg.sv
 import "DPI-C" context function int soma(int x, int y);​
                                                        |
@@ -1549,133 +1549,133 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 	Enabling instrumentation for coverage types: block expression FSM toggle functional
 xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
 	Generating native compiled code:
-		worklib.mux:sv <0x77ade4ec>
+		worklib.mux:sv <0x510d207d>
 			streams:   1, words:  1532
-		worklib.rb:sv <0x39c7d4ff>
+		worklib.rb:sv <0x19d19ae5>
 			streams:   7, words:  4408
-		worklib.ula:sv <0x57572a0e>
+		worklib.ula:sv <0x1e4913da>
 			streams:  11, words: 11556
-		worklib.datapath:sv <0x4c49a8ab>
+		worklib.datapath:sv <0x3db1e3a5>
 			streams:  12, words:  4262
-		worklib.uvm_pkg:sv <0x7700e927>
-			streams:   8, words:  8278
-		worklib.uvm_pkg:sv <0x2f8386bc>
-			streams:   8, words:  7903
-		worklib.uvm_pkg:sv <0x084b0e1c>
-			streams:   7, words:  7262
-		worklib.uvm_pkg:sv <0x64a9c2b6>
-			streams:   7, words:  1844
-		worklib.uvm_pkg:sv <0x0d1c8be5>
-			streams:   9, words:  3380
-		worklib.uvm_pkg:sv <0x19de50b0>
-			streams:  22, words: 60149
-		worklib.uvm_pkg:sv <0x4d3185c9>
-			streams:   7, words:  1844
-		worklib.uvm_pkg:sv <0x5af1beb5>
-			streams:  28, words: 31431
-		worklib.uvm_pkg:sv <0x5be4cee7>
-			streams:  27, words: 29748
-		worklib.uvm_pkg:sv <0x4f88786e>
-			streams:  23, words: 28205
-		worklib.uvm_pkg:sv <0x22d78645>
-			streams:  17, words: 15680
-		worklib.uvm_pkg:sv <0x4474521c>
-			streams:  26, words: 39490
-		worklib.uvm_pkg:sv <0x7f3f3825>
-			streams:   7, words:  2348
-		worklib.uvm_pkg:sv <0x5348b69f>
-			streams:  16, words: 20551
-		worklib.uvm_pkg:sv <0x3b9a8a16>
-			streams:  26, words: 35468
-		worklib.uvm_pkg:sv <0x68f03c72>
-			streams:  25, words: 62470
-		worklib.uvm_pkg:sv <0x1b81c15c>
-			streams:  27, words: 39022
-		worklib.uvm_pkg:sv <0x411647fa>
-			streams:  26, words: 54834
-		worklib.uvm_pkg:sv <0x21245dce>
-			streams:  27, words: 42096
-		worklib.uvm_pkg:sv <0x6a29f3f6>
-			streams:  25, words: 60800
-		worklib.uvm_pkg:sv <0x7977748f>
-			streams:  27, words: 44260
-		worklib.uvm_pkg:sv <0x0ae508f2>
-			streams:  25, words: 66904
-		worklib.uvm_pkg:sv <0x29e492b4>
-			streams:  27, words: 49806
-		worklib.uvm_pkg:sv <0x50aac657>
-			streams:  25, words: 59034
-		worklib.uvm_pkg:sv <0x6d0c29ff>
-			streams:  25, words: 62189
-		worklib.uvm_pkg:sv <0x1713b28b>
-			streams:  27, words: 41168
-		worklib.uvm_pkg:sv <0x7e9e330e>
-			streams:  25, words: 58581
-		worklib.uvm_pkg:sv <0x14103e22>
-			streams:  29, words: 105796
-		worklib.uvm_pkg:sv <0x2b23d1c9>
-			streams:  71, words: 140316
-		worklib.cdns_uvm_pkg:sv <0x50ed0c8b>
-			streams:  28, words: 39360
-		worklib.cdns_uvm_pkg:sv <0x2eadb22b>
-			streams:   9, words:  5179
-		worklib.cdns_uvm_pkg:sv <0x6b3c7c57>
-			streams:  10, words:  9339
-		worklib.uvm_pkg:sv <0x7b6484b6>
-			streams:  26, words: 28229
-		worklib.uvm_pkg:sv <0x520261b0>
-			streams:   7, words:  3126
-		worklib.uvm_pkg:sv <0x79af0624>
-			streams:  24, words: 28735
-		worklib.uvm_pkg:sv <0x12bbfafa>
-			streams:  70, words: 84805
-		worklib.uvm_pkg:sv <0x51c96f20>
-			streams: 112, words: 177103
-		worklib.uvm_pkg:sv <0x0abae7ac>
-			streams:  70, words: 83581
-		worklib.uvm_pkg:sv <0x5a319369>
-			streams:   9, words:  5110
-		worklib.uvm_pkg:sv <0x7681d3ec>
-			streams:  25, words: 37002
-		worklib.uvm_pkg:sv <0x1c7e3fcc>
-			streams: 111, words: 174939
-		worklib.uvm_pkg:sv <0x7a2b926c>
-			streams: 278, words: 331906
-		worklib.uvm_pkg:sv <0x69bab019>
-			streams:   7, words:  3126
-		worklib.pkg:sv <0x213311c4>
-			streams:  46, words: 61098
-		worklib.pkg:sv <0x6a5e0726>
-			streams:  54, words: 53343
-		worklib.uvm_pkg:sv <0x529674c1>
-			streams: 104, words: 177235
-		worklib.uvm_pkg:sv <0x17cc16e0>
-			streams:   7, words:  3126
-		worklib.uvm_pkg:sv <0x47828595>
-			streams:  23, words: 28751
-		worklib.uvm_pkg:sv <0x3174a7b8>
-			streams: 219, words: 293141
-		worklib.uvm_pkg:sv <0x001a83d3>
-			streams:  23, words: 35740
-		worklib.uvm_pkg:sv <0x6c6534e0>
-			streams: 219, words: 293141
-		worklib.uvm_pkg:sv <0x13622139>
-			streams:  23, words: 32230
-		worklib.top:sv <0x6ddaecad>
-			streams: 152, words: 251701
-		worklib.pkg:sv <0x44fc9abd>
+		worklib.uvm_pkg:sv <0x59c23605>
+			streams:   8, words:  7542
+		worklib.uvm_pkg:sv <0x7d154e37>
+			streams:   8, words:  7202
+		worklib.uvm_pkg:sv <0x7fdf9fd8>
+			streams:   7, words:  6612
+		worklib.uvm_pkg:sv <0x213f666d>
+			streams:   7, words:  1918
+		worklib.uvm_pkg:sv <0x3636ec8c>
+			streams:   8, words:  2765
+		worklib.uvm_pkg:sv <0x5966d302>
+			streams:  22, words: 50596
+		worklib.uvm_pkg:sv <0x245d1b75>
+			streams:   7, words:  1918
+		worklib.uvm_pkg:sv <0x1d45aa2a>
+			streams:  28, words: 26382
+		worklib.uvm_pkg:sv <0x5fcf9028>
+			streams:  27, words: 25177
+		worklib.uvm_pkg:sv <0x15f66d8d>
+			streams:  23, words: 24620
+		worklib.uvm_pkg:sv <0x3a50584a>
+			streams:  14, words:  5920
+		worklib.uvm_pkg:sv <0x16ba9f07>
+			streams:  26, words: 35156
+		worklib.uvm_pkg:sv <0x56e3a229>
+			streams:   7, words:  2422
+		worklib.uvm_pkg:sv <0x7724614c>
+			streams:  14, words: 15839
+		worklib.uvm_pkg:sv <0x2379bdcb>
+			streams:  26, words: 29837
+		worklib.uvm_pkg:sv <0x1e887045>
+			streams:  25, words: 54467
+		worklib.uvm_pkg:sv <0x79550daa>
+			streams:  27, words: 32823
+		worklib.uvm_pkg:sv <0x1c438df9>
+			streams:  26, words: 46766
+		worklib.uvm_pkg:sv <0x069093c8>
+			streams:  27, words: 35371
+		worklib.uvm_pkg:sv <0x6b5c7cd3>
+			streams:  25, words: 51262
+		worklib.uvm_pkg:sv <0x242296ad>
+			streams:  27, words: 37474
+		worklib.uvm_pkg:sv <0x7698b3c0>
+			streams:  25, words: 56962
+		worklib.uvm_pkg:sv <0x601449f7>
+			streams:  27, words: 42288
+		worklib.uvm_pkg:sv <0x1558b56a>
+			streams:  25, words: 50105
+		worklib.uvm_pkg:sv <0x6c55cbd1>
+			streams:  25, words: 53621
+		worklib.uvm_pkg:sv <0x5f1df406>
+			streams:  27, words: 34915
+		worklib.uvm_pkg:sv <0x791e6991>
+			streams:  25, words: 50164
+		worklib.uvm_pkg:sv <0x0b50c0fa>
+			streams:  28, words: 79461
+		worklib.uvm_pkg:sv <0x2a9197ea>
+			streams:  59, words: 78598
+		worklib.cdns_uvm_pkg:sv <0x7f64292a>
+			streams:  27, words: 34653
+		worklib.cdns_uvm_pkg:sv <0x1976d258>
+			streams:   8, words:  4022
+		worklib.cdns_uvm_pkg:sv <0x6de051df>
+			streams:  10, words:  8686
+		worklib.uvm_pkg:sv <0x72cd4dbb>
+			streams:  26, words: 25226
+		worklib.uvm_pkg:sv <0x7bce1ca4>
+			streams:   7, words:  3090
+		worklib.uvm_pkg:sv <0x645b3a8b>
+			streams:  24, words: 22451
+		worklib.uvm_pkg:sv <0x57e372a6>
+			streams:  69, words: 69676
+		worklib.uvm_pkg:sv <0x4a2dc138>
+			streams: 110, words: 146328
+		worklib.uvm_pkg:sv <0x5610ea25>
+			streams:  69, words: 68934
+		worklib.uvm_pkg:sv <0x26c8378b>
+			streams:   9, words:  4523
+		worklib.uvm_pkg:sv <0x6b5b56a2>
+			streams:  25, words: 32021
+		worklib.uvm_pkg:sv <0x1c5bb62a>
+			streams: 109, words: 144164
+		worklib.uvm_pkg:sv <0x2bf8ed23>
+			streams: 270, words: 259952
+		worklib.uvm_pkg:sv <0x400edf66>
+			streams:   7, words:  3090
+		worklib.pkg:sv <0x6187cdf4>
+			streams:  46, words: 55201
+		worklib.pkg:sv <0x139c3baa>
+			streams:  54, words: 46492
+		worklib.uvm_pkg:sv <0x7cb29a40>
+			streams:  97, words: 137017
+		worklib.uvm_pkg:sv <0x7c5f18a3>
+			streams:   7, words:  3090
+		worklib.uvm_pkg:sv <0x3df02c34>
+			streams:  23, words: 24504
+		worklib.uvm_pkg:sv <0x61aba466>
+			streams: 208, words: 219807
+		worklib.uvm_pkg:sv <0x114ed6c3>
+			streams:  23, words: 30573
+		worklib.uvm_pkg:sv <0x5a588c09>
+			streams: 208, words: 219807
+		worklib.uvm_pkg:sv <0x34095206>
+			streams:  23, words: 27523
+		worklib.top:sv <0x56d6f99e>
+			streams: 148, words: 198921
+		worklib.pkg:sv <0x49ba3d6f>
 			streams:   0, words:     0
-		worklib.cdns_uvm_pkg:sv <0x48003cd0>
-			streams: 136, words: 284984
-		worklib.cdns_uvmapi:svp <0x44eaf677>
-			streams:  27, words: 36890
-		worklib.cdns_assert2uvm_pkg:sv <0x1b200012>
-			streams:   3, words:  2525
-		worklib.uvm_pkg:sv <0x0b38393d>
-			streams: 4718, words: 9314293
+		worklib.cdns_uvm_pkg:sv <0x176ef37e>
+			streams: 134, words: 246574
+		worklib.cdns_uvmapi:svp <0x3493f500>
+			streams:  27, words: 31625
+		worklib.cdns_assert2uvm_pkg:sv <0x165e3bdf>
+			streams:   3, words:  2233
+		worklib.uvm_pkg:sv <0x0f4bb22a>
+			streams: 4440, words: 7214963
 logic [15:0] registers [4];
                      |
-xmelab: *W,COVMDD (../rtl/rb.sv,16|21): Toggle coverage for bit, logic, reg, wire, and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage on for these types specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+xmelab: *W,COVMDD (../rtl/rb.sv,16|21): Toggle coverage for bit, logic, reg, wire, enum and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage for enum multi-dimensional static arrays specify 'set_toggle_scoring -sv_enum enable_mda' and for other multi-dimensional static arrays, specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
 	Building instance specific data structures.
 xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
 xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
@@ -1700,18 +1700,19 @@ xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_inst
 		SV Class specializations:    447     447
 	Writing initial simulation snapshot: worklib.top:sv
 Loading snapshot worklib.top:sv .................... Done
+xmsim: *W,XCLGNOPTM: The SystemVerilog constraint solver Xceligen options 'seed_only_rand and process_alternate_rng and ignore_worklib_name' are not specified and will default to 0. The recommended value for each of them is 1 which will become the default in a future release.
 SVSEED default: 1
 xmsim: *W,RNDXCELON: Xceligen, the new SystemVerilog constraint solver is used. Disabling Xceligen and using the legacy constraint solver is possible with "xrun/xmsim -xceligen on=0 ...".
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-xcelium> source /usr/local/cds/XCELIUM1809/tools/xcelium/files/xmsimrc
-xcelium> source /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> source /usr/local/cds/XCELIUM1909/tools/xcelium/files/xmsimrc
+xcelium> source /usr/local/cds/XCELIUM1909/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
 xcelium> database -open waves -shm
 Created SHM database waves
 xcelium> probe -create top -depth all -all -shm -database waves
 Created probe 1
 xcelium> run 
 ----------------------------------------------------------------
-CDNS-UVM-1.1d (18.09-s011)
+CDNS-UVM-1.1d (19.09-s003)
 (C) 2007-2013 Mentor Graphics Corporation
 (C) 2007-2013 Cadence Design Systems, Inc.
 (C) 2006-2013 Synopsys, Inc.
@@ -1732,7 +1733,7 @@ CDNS-UVM-1.1d (18.09-s011)
 
 UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
 UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_int=*,recording_detail,1
-SDI/Verilog Transaction Recording Facility Version 18.09-s011
+SDI/Verilog Transaction Recording Facility Version 19.09-s003
 UVM_INFO @ 100: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       3982}
 UVM_INFO @ 200: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       7653}
 UVM_INFO @ 280: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      19443}
@@ -11733,7 +11734,7 @@ UVM_INFO @ 701620: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      
 UVM_INFO @ 701700: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =       1339}
 UVM_INFO @ 701800: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      18620}
 UVM_INFO @ 701860: uvm_test_top.env_h.sb.comp [Comparator Match] {data_o =      17624}
-UVM_INFO /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 701900: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /usr/local/cds/XCELIUM1909/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 701900: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 
 --- UVM Report catcher Summary ---
 
@@ -11758,7 +11759,7 @@ UVM_FATAL :    0
 [TEST_DONE]     1
 [UVM_CMDLINE_PROC]     1
 Simulation complete via $finish(1) at time 701900 NS + 52
-/usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+/usr/local/cds/XCELIUM1909/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
 xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
 xmsim: *W,CGPIZE: Instance coverage for covergroup instance "transacoes" will not be dumped to database as per_instance option value is set to 0:./coverage.sv, 28.
@@ -11775,6 +11776,6 @@ coverage setup:
   testname :  simple_test
 
 coverage files:
-  model(design data) :  ./cov_work/scope/icc_303bca10_2636f876.ucm
-  data               :  ./cov_work/scope/simple_test/icc_303bca10_2636f876.ucd
-TOOL:	xrun(64)	18.09-s011: Exiting on Nov 19, 2019 at 12:05:13 -03  (total: 00:00:33)
+  model(design data) :  ./cov_work/scope/icc_303bca10_214cf424.ucm
+  data               :  ./cov_work/scope/simple_test/icc_303bca10_214cf424.ucd
+TOOL:	xrun(64)	19.09-s003: Exiting on Nov 20, 2019 at 12:51:12 -03  (total: 00:00:32)
