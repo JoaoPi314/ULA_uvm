@@ -1,0 +1,26 @@
+//session level information for all group and test below
+session vm_uart_ctrl_sessions {
+	top_dir : $ENV(MY_REGRESSION_AREA);
+	output_mode: terminal;
+};
+
+//Define test group and default simulation attributes for the group
+group uart_tests {
+
+	//run script to launch simulation
+	run_script: "$RUN_ENV(MY_WORK_AREA)/scripts/ula_run.sh";
+
+	//scan script to scan logs for simulation errors and information
+	scan_script: "vm_scan.pl /usr/local/cds/INCISIVE152/vmanager/bin/ius_hdl.flt";
+
+	//default run count
+	count : 1;
+
+	//default to random seed selection
+	sv_seed : random;
+
+	// Define simulations to be run
+	// Use attributes above by default
+
+	test ULA { };
+};
